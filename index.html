@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Link Generator</title>
+  </head>
+  <body>
+    <h1>WhatsApp Link Generator</h1>
+    <form>
+      <label for="phone">Enter a phone number:</label>
+      <input type="tel" id="phone" name="phone" required>
+      <button type="button" onclick="generateLink()">Check WhatsApp number</button>
+    </form>
+    <p id="result"></p>
+    <script>
+      function generateLink() {
+        var phone = document.getElementById("phone").value;
+        var link = "https://api.whatsapp.com/send/?phone=" + phone;
+        document.getElementById("result").innerHTML = '<a href="' + link + '">' + link + '</a>';
+      }
+    </script>
+  </body>
+</html>
