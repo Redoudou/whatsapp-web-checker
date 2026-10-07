@@ -10,7 +10,7 @@ Scope: all three original tracked files (`index.html`, `README.md`, `LICENSE`) a
 | Button bypassed normal form submission | Enter could reload the page rather than generate a link. | Handle the form's submit event and prevent navigation. |
 | No mobile viewport, feedback, or presentation | Poor small-screen usability and unclear results. | Responsive layout, associated help/error text, focus handling, live feedback, and stale-link clearing. |
 | Minimal documentation and no release/checks | Purpose, privacy, operation, and publishing were unclear. | Expanded README; added this audit, changelog, security guidance, and Node-based CI checks. |
-| Existing Pages configuration reported an HTTP custom-domain URL | Discoverability and HTTPS behavior needed verification. | Document the account-domain behavior and verify the actual published endpoint during release. |
+| Existing Pages configuration reported an HTTP custom-domain URL | Discoverability and HTTPS behavior needed verification. | Verified the inherited domain responds over HTTPS. Use its explicit HTTPS URL in documentation and repository metadata. The default github.io address currently redirects through HTTP; account-wide domain settings were left unchanged. |
 
 ## Remaining limits
 

@@ -2,7 +2,7 @@
 
 A small, dependency-free page that creates a WhatsApp chat link from an international phone number. Start a conversation without adding a contact first.
 
-**[Open the web app](https://redoudou.github.io/whatsapp-web-checker/)** · [Audit](docs/AUDIT.md) · [Release history](CHANGELOG.md)
+**[Open the web app](https://helloredwan.me/whatsapp-web-checker/)** · [Audit](docs/AUDIT.md) · [Release history](CHANGELOG.md)
 
 > Despite the original repository name, this is a **chat-link generator**, not an account lookup service. It cannot independently determine whether a number is registered on WhatsApp. WhatsApp handles that after you open the link.
 
@@ -53,7 +53,7 @@ Before publishing, also check keyboard submission, invalid input, editing after 
 
 Hosted on GitHub Pages from **`main` / repository root**. In **Settings → Pages**, select **Deploy from a branch**, then `main` and `/ (root)`. Keep HTTPS enabled when available. Changes pushed to `main` are published automatically; check the repository's Actions and Pages settings for deployment status.
 
-The default Pages address is `https://redoudou.github.io/whatsapp-web-checker/`. An account-level custom domain can redirect that address; GitHub reports the current canonical address in Settings → Pages. This repository does not set its own custom domain.
+The live HTTPS address is `https://helloredwan.me/whatsapp-web-checker/`. The default address, `https://redoudou.github.io/whatsapp-web-checker/`, currently redirects to the inherited account-level custom domain. This repository does not set its own custom domain. GitHub currently reports an HTTP canonical URL for that inherited domain; use the explicit HTTPS link above. Domain/DNS ownership and account-wide configuration are outside this repository cleanup.
 
 For another static host, publish only `index.html`, `styles.css`, `app.js`, and `LICENSE`. No build command, secrets, API keys, or server are needed.
 
