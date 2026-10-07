@@ -1,23 +1,38 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <title>WhatsApp Link Generator</title>
-  </head>
-  <body>
-    <h1>WhatsApp Link Generator</h1>
-    <form>
-      <label for="phone">Enter a phone number with the country code (without the "+" or the "00"):</label>
-      <input type="tel" id="phone" name="phone" required>
-      <button type="button" onclick="generateLink()">Check WhatsApp number</button>
-    </form>
-    <p id="result"></p>
-    <script>
-      function generateLink() {
-        var phone = document.getElementById("phone").value;
-        var link = "https://api.whatsapp.com/send/?phone=" + phone;
-        document.getElementById("result").innerHTML = '<a href="' + link + '">' + link + '</a>';
-      }
-    </script>
-  </body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Create a WhatsApp chat link without saving a contact. Free, simple, and processed in your browser.">
+  <meta name="referrer" content="no-referrer">
+  <title>WhatsApp Chat Link · WhatsApp Web Checker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header><span class="eyebrow">A SMALL TOOL FOR EVERYDAY CONVERSATIONS</span>
+      <h1>A new chat.<br>One simple link.</h1>
+      <p class="intro">Open a WhatsApp conversation without saving the number to your contacts.</p>
+    </header>
+    <section class="card" aria-labelledby="form-title">
+      <h2 id="form-title">Create your chat link</h2>
+      <form id="link-form" novalidate>
+        <label for="phone">Phone number</label>
+        <p id="phone-help" class="hint">Include the country code, for example +1 202 555 0123. Leave out the local leading zero.</p>
+        <input type="tel" id="phone" autocomplete="off" inputmode="tel" placeholder="+1 202 555 0123" aria-describedby="phone-help error" required>
+        <button type="submit">Create link <span aria-hidden="true">→</span></button>
+        <p id="error" class="error" role="alert"></p>
+      </form>
+      <section id="result" hidden aria-label="Generated link">
+        <p role="status">Your chat link is ready.</p>
+        <a id="chat-link" rel="noreferrer">Open WhatsApp →</a>
+        <p id="link-preview" class="hint"></p>
+      </section>
+      <noscript><p>Enable JavaScript to generate a chat link.</p></noscript>
+    </section>
+    <aside><h2>What happens next?</h2><p>Open the link to continue in WhatsApp. WhatsApp handles whether the number can be contacted; this tool cannot verify account availability.</p><p>Your number stays in this page until you open the generated link. No analytics, cookies, or phone-number storage.</p></aside>
+    <footer>Independent project by <a href="https://github.com/Redoudou">Redoudou</a>. Not affiliated with WhatsApp or Meta.<br><a href="https://github.com/Redoudou/whatsapp-web-checker">Source code</a> · <a href="LICENSE">GPL-3.0 license</a> · Provided without warranty.</footer>
+  </main>
+</body>
 </html>
